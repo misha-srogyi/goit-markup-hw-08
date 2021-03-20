@@ -1,0 +1,62 @@
+/* Regular Customers */
+
+.regular-customers {
+  padding: 60px 0;
+}
+
+.regular-customers__title {
+  font-family: 'Roboto';
+  font-style: 700;
+  font-size: 28px;
+  line-height: 1.171;
+  text-align: center;
+  letter-spacing: 3%;
+}
+
+.customers__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * 30px);
+  // margin-top: calc(-1 * 30px);
+}
+
+.customers__item {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border: 1px solid $icon-grey;
+  border-radius: 4px;
+  flex-basis: calc(100% / 2 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  height: 90px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border-color: $blue-text;
+  }
+}
+
+.customers__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  color: $blue-text;
+
+  &:hover,
+  &:focus {
+    .customers__icon {
+      fill: $blue-text;
+    }
+  }
+}
+
+.customers__icon {
+  fill: $icon-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
