@@ -8,7 +8,9 @@
   color: $blue-text;
   text-decoration: none;
 
-  margin: 16px 0 16px;
+  @media (max-width: 767px) {
+    margin: 16px 0 16px;
+  }
 }
 
 .logo__subtext {
@@ -17,9 +19,4 @@
   &--white {
     color: $white-text;
   }
-}
-
-.logo--position {
-  display: flex;
-  align-items: center;
 }

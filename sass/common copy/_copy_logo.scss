@@ -10,9 +10,8 @@
 }
 
 .logo__subtext {
- color: $black-text;
- 
- &--white {
-     color: $white-text;
- }
+  color: $black-text;
+  &--white {
+    color: $white-text;
+  }
 }

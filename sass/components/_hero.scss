@@ -14,8 +14,19 @@
 //   background-position: center;
 // }
 .banner {
-  background-color: black;
+  max-width: 480px;
+  min-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
 }
+
 /* Заголовок */
 .container--main-title {
   font-family: 'Roboto';
@@ -24,7 +35,8 @@
   font-size: 26px;
   line-height: 1.615;
   letter-spacing: 0.06em;
-  color: $white-text;
+  // color: $white-text;
+  color: black;
   padding-top: 200px;
   text-align: center;
   text-transform: uppercase;
