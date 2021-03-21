@@ -97,6 +97,9 @@
     padding-left: 50px;
   }
 }
+.nav-contacts__item--hedding:not(:last-child) {
+  margin-bottom: 10px;
+}
 
 .nav-contacts__link {
   font-family: 'Roboto';
