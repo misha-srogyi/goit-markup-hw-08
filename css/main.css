@@ -1173,12 +1173,6 @@ img {
   fill: white;
 }
 
-@media (max-width: 1199px) {
-  .subscribe {
-    margin-top: 60px;
-  }
-}
-
 @media (min-width: 1200px) {
   .subscribe {
     margin-left: 93px;
