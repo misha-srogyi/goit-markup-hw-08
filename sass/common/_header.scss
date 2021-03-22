@@ -23,7 +23,6 @@
 .nav-list {
   @media (min-width: 768px) {
     margin-right: 84px;
-    margin-left: 88px;
     display: flex;
     justify-content: space-between;
   }
@@ -111,6 +110,10 @@
   color: $white-text-op60;
   text-decoration: none;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.171;
+  }
 
   &--header {
     color: $grey-text;

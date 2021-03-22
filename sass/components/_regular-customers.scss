@@ -2,6 +2,10 @@
 
 .regular-customers {
   padding: 60px 0;
+
+  @media (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
 .regular-customers__title {
@@ -9,28 +13,57 @@
   font-style: 700;
   font-size: 28px;
   line-height: 1.171;
-  text-align: center;
   letter-spacing: 3%;
+  text-align: center;
+
+  @media (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .customers__list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * 30px);
-  // margin-top: calc(-1 * 30px);
+
+  @media (max-width: 767px) {
+    margin-left: calc(-1 * 30px);
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    margin-left: calc(-1 * 30px);
+  }
+
+  @media (min-width: 1200px) {
+    margin: 50px -15px 0;
+  }
 }
 
 .customers__item {
+  border: 1px solid $icon-grey;
   text-align: center;
   display: flex;
   justify-content: center;
-  border: 1px solid $icon-grey;
   border-radius: 4px;
-  flex-basis: calc(100% / 2 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
   height: 90px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (max-width: 767px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: calc((100% - 90px) / 3);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+  @media (min-width: 1200px) {
+    width: calc(100% / 6 - 30px);
+    margin: 0 15px;
+  }
 
   &:hover {
     border-color: $blue-text;

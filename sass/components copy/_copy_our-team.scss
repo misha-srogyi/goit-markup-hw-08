@@ -18,6 +18,8 @@
   text-align: center;
   margin-bottom: 50px;
 }
+
+/* Workers Card */
 .our-team-workers {
   list-style-type: none;
   display: flex;
@@ -26,9 +28,6 @@
   margin-top: calc(-1 * 50px);
   margin-left: calc(-1 * 30px);
 }
-
-
-/* Workers Card */
 
 .our-team__item {
   flex-basis: calc(100% / 4 - 30px);
@@ -81,24 +80,24 @@
 .employee-list__link {
   width: 44px;
   height: 44px;
-   border-radius: 100%;
+  border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $icon-background-dark-grey;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-  &:hover, 
-  &:focus  {
-      .employee-list__icon 
-      { fill: $white-text; }
-    
-      
-      &:hover,
-      &:focus {
-        background-color: $blue-text;
+
+  &:hover,
+  &:focus {
+    .employee-list__icon {
+      fill: $white-text;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $blue-text;
       //   color: $white-text;
-      }
+    }
   }
 }
 
