@@ -357,6 +357,13 @@ img {
   overflow-y: -moz-hidden-unscrollable;
 }
 
+@media (max-width: 1199px) {
+  .modal {
+    max-width: 450px;
+    width: 100%;
+  }
+}
+
 .modal::-webkit-scrollbar {
   width: 0;
 }
@@ -494,6 +501,16 @@ img {
   color: #757575;
 }
 
+@media (max-width: 1199px) {
+  .form-checkbox__text {
+    font-size: 12px;
+    line-height: 1.171;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+  }
+}
+
 .form-checkbox__link {
   font-family: 'Roboto';
   font-weight: 400;
@@ -502,6 +519,13 @@ img {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #2196f3;
+}
+
+@media (max-width: 1199px) {
+  .form-checkbox__link {
+    font-size: 12px;
+    line-height: 1.171;
+  }
 }
 
 .form-checkbox__input:checked ~ .modal-checkbox .modal-checkbox__icon {
@@ -517,10 +541,22 @@ img {
   border-radius: 2px;
   width: 16px;
   height: 15px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+}
+
+@media (max-width: 1199px) {
+  .modal-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-checkbox {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 
 .modal-checkbox__icon {
@@ -952,8 +988,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 170px;
-  height: 90px;
   color: #2196f3;
 }
 
@@ -1005,14 +1039,8 @@ img {
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .footer--container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -1026,7 +1054,10 @@ img {
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .footer-section {
-    margin-left: 76px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    margin-right: auto;
   }
 }
 
@@ -1100,11 +1131,7 @@ img {
   color: #2196f3;
 }
 
-.social-container {
-  width: 206px;
-}
-
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .social-container {
     margin-top: 60px;
   }
@@ -1112,9 +1139,9 @@ img {
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .social-container {
-    position: absolute;
-    margin-left: 473px;
-    margin-top: 5px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 206px;
+            flex: 0 1 206px;
   }
 }
 
@@ -1137,6 +1164,12 @@ img {
   margin-bottom: 20px;
 }
 
+@media (max-width: 1199px) {
+  .social-container__text {
+    text-align: center;
+  }
+}
+
 .share-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1144,6 +1177,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 206px;
 }
 
 .share-networks__link {
@@ -1175,7 +1209,9 @@ img {
 
 @media (max-width: 1199px) {
   .subscribe {
-    margin-top: 60px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 
@@ -1204,9 +1240,9 @@ img {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .subscribe-form {
-    margin-left: 166px;
+    margin-top: 60px;
   }
 }
 
@@ -1230,24 +1266,6 @@ img {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-.subscribe-form__label {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-@media (min-width: 1200px) {
-  .subscribe-form__label {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 .subscribe-form__input {
@@ -1365,7 +1383,6 @@ img {
   border-radius: 4px;
 }
 
-/* Cards Portfolio */
 .portfolio-cards {
   list-style-type: none;
   display: -webkit-box;
@@ -1373,17 +1390,36 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-bottom: 94px;
-  margin-left: calc(-1 * 30px);
-  margin-top: calc(-1 * 30px);
+}
+
+@media (min-width: 768px) {
+  .portfolio-cards {
+    margin-left: calc(-1 * 30px);
+    margin-top: calc(-1 * 30px);
+  }
 }
 
 .portfolio-cards__item {
-  -ms-flex-preferred-size: calc(100% / 3 - 30px);
-      flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
   border: 1px solid #eeeeee;
+}
+
+@media (max-width: 767px) {
+  .portfolio-cards__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .portfolio-cards__item:last-child {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio-cards__item {
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+        flex-basis: calc((100% - 2 * 30px) / 2);
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 50%;
+  }
 }
 
 .portfolio-cards__item:hover {
@@ -1443,7 +1479,6 @@ img {
   text-align: left;
 }
 
-/* Вспливаюче вікно */
 .card-content {
   padding: 20px 24px;
 }

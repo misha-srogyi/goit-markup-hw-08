@@ -2,6 +2,7 @@
 .footer {
   background: #2f303a;
   padding: 60px 0;
+  // padding-top: 60px;
   border: 1px;
   display: block;
 }
@@ -15,9 +16,10 @@
   }
 
   @media (min-width: 768px) and (max-width: 1199px) {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: center;
+    // flex-direction: column;
+    // align-items: flex-start;
+    // text-align: center;
+    flex-wrap: wrap;
   }
 
   @media (min-width: 1200px) {
@@ -26,7 +28,9 @@
 }
 .footer-section {
   @media (min-width: 768px) and (max-width: 1199px) {
-    margin-left: 76px;
+    // margin-left: 76px;
+    flex: 0 1 50%;
+    margin-right: auto;
   }
 }
 
@@ -87,15 +91,16 @@
 // Social Networks
 
 .social-container {
-  width: 206px;
-  @media (max-width: 1199px) {
+  @media (max-width: 767px) {
     margin-top: 60px;
   }
 
   @media (min-width: 768px) and (max-width: 1199px) {
-    position: absolute;
-    margin-left: 473px;
-    margin-top: 5px;
+    flex: 0 1 206px;
+    // position: absolute;
+    // margin-left: 473px;
+    // margin-top: 5px;
+    // width: 206px;
   }
 
   @media (min-width: 1200px) {
@@ -112,12 +117,16 @@
     text-transform: uppercase;
     color: $white-text;
     margin-bottom: 20px;
+    @media (max-width: 1199px) {
+      text-align: center;
+    }
   }
 }
 
 .share-footer {
   display: flex;
   justify-content: space-between;
+  width: 206px;
 }
 
 .share-networks__link {
@@ -145,7 +154,8 @@
 
 .subscribe {
   @media (max-width: 1199px) {
-    margin-top: 60px;
+    // margin-top: 60px;
+    flex: 0 1 100%;
   }
 
   @media (min-width: 1200px) {
@@ -161,8 +171,9 @@
     align-items: center;
   }
 
-  @media (min-width: 768px) and (max-width: 1199px) {
-    margin-left: 166px;
+  @media (max-width: 1199px) {
+    // margin-left: 166px;
+    margin-top: 60px;
   }
 
   @media (min-width: 1200px) {
@@ -183,16 +194,19 @@
   flex-grow: 1;
 }
 
-.subscribe-form__label {
-  flex-direction: column;
-  align-items: flex-start;
+// .subscribe-form__label {
+//   flex-direction: column;
+//   align-items: flex-start;
 
-  @media (min-width: 1200px) {
-    display: flex;
-  }
-}
+//   @media (min-width: 1200px) {
+//     display: flex;
+//   }
+// }
 
 .subscribe-form__input {
+  // @media (max-width: 480px) {
+  //   width: 100%;
+  // }
   width: 450px;
   height: 50px;
   padding-left: 16px;
