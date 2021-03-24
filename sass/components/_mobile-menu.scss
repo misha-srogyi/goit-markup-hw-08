@@ -1,0 +1,145 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $white-text;
+  //   z-index: 999;
+  //   display: flex;
+  //   align-items: flex-start;
+
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  &:hover,
+  &:focus {
+    .mobile-close-icon {
+      fill: $blue-text;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .burger-icon {
+      fill: $blue-text;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-close-icon,
+.burger-icon {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu__item {
+  &:hover,
+  &:focus {
+    .mobile-link {
+      color: $blue-text;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-link {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.172;
+  letter-spacing: 0.02em;
+  display: block;
+  color: $black-text;
+  text-decoration: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--current {
+    color: $blue-text;
+  }
+}
+
+.mobile-contacts {
+  margin-top: 302px;
+}
+
+.mobile-contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-contacts__link {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.171;
+  letter-spacing: 0.02em;
+  color: $blue-text;
+  text-decoration: none;
+
+  &--mod {
+    font-size: 24px;
+    line-height: 1.172;
+    color: $grey-text;
+  }
+}
+
+.mobile-social {
+  display: flex;
+  flex-direction: row;
+}
+
+.mobile-social__item:not(:last-child) {
+  border-right: 1px solid;
+  color: $grey-text;
+  margin-right: 9px;
+}
+
+.mobile-social__link {
+  text-decoration: none;
+  color: $blue-text;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.222;
+  letter-spacing: 0.02em;
+  padding-right: 10px;
+}
