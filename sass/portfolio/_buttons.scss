@@ -1,18 +1,35 @@
-// Portfolio Buttons
+// // Portfolio Buttons
 
 .portfolio {
   padding-top: 94px;
+  @media (max-width: 1199px) {
+    padding-top: 60px;
+  }
 }
 
 .buttons {
   list-style-type: none;
   display: flex;
-  justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: calc(40px - 15px);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
-.buttons__name:not(:last-child) {
-  margin-right: 8px;
+.buttons__name {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 
 .buttons__title {
@@ -21,7 +38,7 @@
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
   padding: 6px 22px;

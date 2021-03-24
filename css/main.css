@@ -266,17 +266,48 @@ img {
   color: white;
 }
 
+.banner {
+  height: 400px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/header-mobile.jpg), -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
+  background-image: url(../images/header-mobile.jpg), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .banner .banner {
+    background-image: url(../images/header-mobile@2x.jpg);
+  }
+}
+
+@media (min-width: 768px) {
+  .banner {
+    max-width: 768px;
+    background-image: url(../images/header-tablet.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .banner .banner {
+    background-image: url(../images/header-tablet@2x.jpg);
+  }
+}
+
 @media (min-width: 1200px) {
   .banner {
     height: 600px;
     max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bg-hero.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-image: url(../images/bg-hero.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .banner .banner {
+    background-image: url(../images/hero-img@2x.jpg);
   }
 }
 
@@ -289,9 +320,17 @@ img {
   line-height: 1.615;
   letter-spacing: 0.06em;
   color: white;
-  padding-top: 200px;
+  padding-top: 118px;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  .container--main-title {
+    padding-top: 200px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 /* Button */
@@ -699,8 +738,70 @@ img {
 }
 
 /* What We Do */
+@media (max-width: 1199px) {
+  .what-we-do {
+    display: none;
+  }
+}
+
 .what-we-do {
-  display: none;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.what-we-do__title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.66;
+  color: #212121;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.list-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list-photo__item {
+  position: relative;
+  overflow: hidden;
+}
+
+.list-photo__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.what-we-do__text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.what-we-do__subtext {
+  font-size: 'Roboto';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: white;
+  text-transform: uppercase;
 }
 
 /* Our Team */
@@ -1341,19 +1442,48 @@ img {
   padding-top: 94px;
 }
 
+@media (max-width: 1199px) {
+  .portfolio {
+    padding-top: 60px;
+  }
+}
+
 .buttons {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: calc(40px - 15px);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .buttons {
+    margin-bottom: 50px;
+  }
 }
 
 .buttons__name:not(:last-child) {
   margin-right: 8px;
+}
+
+@media (max-width: 767px) {
+  .buttons__name {
+    margin-bottom: 15px;
+  }
 }
 
 .buttons__title {
@@ -1362,7 +1492,7 @@ img {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
   padding: 6px 22px;
@@ -1390,12 +1520,19 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 60px;
 }
 
 @media (min-width: 768px) {
   .portfolio-cards {
     margin-left: calc(-1 * 30px);
     margin-top: calc(-1 * 30px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-cards {
+    padding-bottom: 94px;
   }
 }
 
@@ -1407,9 +1544,6 @@ img {
   .portfolio-cards__item:not(:last-child) {
     margin-bottom: 30px;
   }
-  .portfolio-cards__item:last-child {
-    margin-bottom: 60px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1419,6 +1553,15 @@ img {
     margin-top: 30px;
     margin-left: 30px;
     width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-cards__item {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
   }
 }
 
@@ -1437,17 +1580,11 @@ img {
   display: block;
 }
 
-.portfolio-cards__link:hover, .portfolio-cards__link:focus {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 /* Вспливаюче вікно */
 .card-thumb {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 294px;
 }
 
 .hover-thumb {
