@@ -1,7 +1,9 @@
 /*Our Features */
 .features {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @media (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   @media (min-width: 1200px) {
     padding-top: 94px;
@@ -57,6 +59,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .our-features__subtitle {
